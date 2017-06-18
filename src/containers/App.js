@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { PropTypes } from 'prop-types';
 import Stats from '../components/Stats'
+import BookStatus from '../components/BookStatus'
 
 window.React = React;
 
@@ -105,20 +106,6 @@ Header.propTypes = {
         numToRead: PropTypes.number.isRequired,
         deadline: PropTypes.string.isRequired
     })
-}
-
-// pure components: pure functions; rely on props pass down to them
-function BookStatus(props) {
-    return (
-        <div className="book-status">
-            <button className="done-btn" onClick={props.onDone}>Done</button>
-            <div className="done-date">{props.date}</div>
-        </div>
-    )
-}
-BookStatus.propTypes = {
-    onDone: PropTypes.func.isRequired,
-    date: PropTypes.string
 }
 
 // pure component: depend on other; act as dependency to other
