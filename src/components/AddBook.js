@@ -16,16 +16,16 @@ export default class AddBook extends Component {
         });
     }
 
-    onSubmit = (e) => {
+    addBook = (e) => {
         e.preventDefault();
-        this.props.onAdd(this.state.name);
+        this.props.addBook(this.state.name);
         this.setState({name: ""});      // Clear input box after adding a book
     }
 
     render() {
         return (
             <div className="add-book-form">
-                <form onSubmit={this.onSubmit}>
+                <form onSubmit={this.addBook}>
                     <input type="text" value={this.state.name} onChange={this.onNameChange} />
                     <input type="submit" value="Add Book" />
                 </form>
@@ -34,6 +34,6 @@ export default class AddBook extends Component {
     }
 }
 AddBook.propTypes = {
-    onAdd: PropTypes.func.isRequired
+    addBook: PropTypes.func.isRequired
 }
 

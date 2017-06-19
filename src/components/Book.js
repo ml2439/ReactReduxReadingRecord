@@ -7,19 +7,23 @@ const Book = props => {
     return (
         <div className="book">
             <div className="book-name">
-                <a className="remove-book" onClick={props.onRemove}>x</a>
+                <a className="remove-book" onClick={ () => props.removeBook(props.index) }>x</a>
                 {props.name}
             </div>
-            <BookStatus onDone={props.onBookDone} date={props.doneDate}/>
+            <BookStatus 
+                index={props.index} 
+                toggleBook={props.toggleBook}
+                date={props.doneDate}/>
         </div>
     );
 }
 Book.propTypes = {
     name: PropTypes.string.isRequired,
+    index: PropTypes.number.isRequired,
     done: PropTypes.bool.isRequired,
     doneDate: PropTypes.string,
-    onBookDone: PropTypes.func,
-    onRemove: PropTypes.func
+    toggleBook: PropTypes.func.isRequired,
+    removeBook: PropTypes.func.isRequired
 }
 
 export default Book

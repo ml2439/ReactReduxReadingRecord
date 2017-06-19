@@ -12,6 +12,7 @@ module.exports = {
         contentBase: __dirname + '/dist',
         port: 3030
     },
+    devtool: 'inline-source-map',
     module: {
         rules: [
             {

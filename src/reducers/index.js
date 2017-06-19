@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux'
-import book from './book'
-import goal from './goal'
+import bookReducer from './bookReducer'
+import goalReducer from './goalReducer'
 
 export default combineReducers({
-  book,
-  goal
+  bookReducer,
+  goalReducer
 })

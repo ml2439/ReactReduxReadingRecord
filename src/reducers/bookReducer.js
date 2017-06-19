@@ -18,7 +18,7 @@ const initialState = [
     }
 ]
 
-export default function Book(state=initialState, action) {
+export default function bookReducer(state=initialState, action) {
     switch(action.type) {
         case C.ADD_BOOK:
         return [

@@ -21,15 +21,15 @@ export default class AddGoal extends Component {
         this.setState(this.state);
     }
 
-    onSubmit = (e) => {
+    addGoal = (e) => {
         e.preventDefault();
-        this.props.onAdd(this.state.numToRead, this.state.deadline);
+        this.props.addGoal(this.state.numToRead, this.state.deadline);
     }
 
     render() {
         return (
             <div className="add-goal-form">
-                <form onSubmit={this.onSubmit}>
+                <form onSubmit={this.addGoal}>
                     <span>Read</span>
                     <input type="text" value={this.state.numToRead} onChange={this.onNumChange} />
                     <span> books by </span>
@@ -41,5 +41,5 @@ export default class AddGoal extends Component {
     }
 }
 AddGoal.propTypes = {
-    onAdd: PropTypes.func.isRequired
+    addGoal: PropTypes.func.isRequired
 }
