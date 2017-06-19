@@ -7,7 +7,7 @@ const Book = props => {
     return (
         <div className="book">
             <div className="book-name">
-                <a className="remove-book" onClick={ () => props.removeBook(props.index) }>x</a>
+                <a className="remove-book" onClick={ () => props.removeBook(props.index) }>✖</a>
                 {props.name}
             </div>
             <BookStatus 

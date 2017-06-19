@@ -5,7 +5,9 @@ import { createStore } from 'redux'
 import reducer from './reducers'
 import App from './containers/App'
 
-const store = createStore(reducer)
+const store = createStore(
+    reducer,
+    window.devToolsExtension && window.devToolsExtension())
 
 render (
     <Provider store={store}>

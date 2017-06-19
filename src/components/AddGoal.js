@@ -12,7 +12,8 @@ export default class AddGoal extends Component {
     }
 
     onNumChange = (e) => {
-        this.state.numToRead = parseInt(e.target.value);
+        const isANumber = !isNaN(parseInt(e.target.value));
+        this.state.numToRead = isANumber ? parseInt(e.target.value) : '';
         this.setState(this.state);
     }
 
