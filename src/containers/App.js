@@ -12,12 +12,31 @@ window.React = React;
 var nextId = 4; 
 
 // container
-class App extends Component {
-    constructor(props) {
-        super(props);
+export default class App extends Component {
+    constructor() {
+        super();
         this.state = {
-            books: props.initialBooks,
-            goal: props.initialGoal
+            books: [
+                {
+                    name: "Harry Potter",
+                    done: false,
+                    id: 1
+                },
+                {
+                    name: "Australia",
+                    done: false,
+                    id: 2
+                },
+                {
+                    name: "South Africa",
+                    done: false,
+                    id: 3
+                }
+            ],
+            goal: {
+                numToRead: 25,
+                deadline: "2/11/2018"
+            }
         }
     }
     onBookDone = (index) => {
@@ -49,7 +68,7 @@ class App extends Component {
         return (
             <div>
                 <AddGoal onAdd={this.onGoalAdd} />
-                <Header title={this.props.title} books={this.state.books} goal={this.state.goal}/>
+                <Header title="Yearly Reading Goal" books={this.state.books} goal={this.state.goal}/>
                 <div className="books">
                     {this.state.books.map((b, index) => {
                         return <Book 
@@ -66,22 +85,3 @@ class App extends Component {
         );
     }
 }
-
-App.propTypes = {
-    title: PropTypes.string,
-    initialBooks: PropTypes.arrayOf(PropTypes.shape({
-        name: PropTypes.string.isRequired,
-        done: PropTypes.bool.isRequired,
-        doneDate: PropTypes.string,
-        id: PropTypes.number.isRequired
-    })).isRequired,
-    initialGoal: PropTypes.shape({
-        numToRead: PropTypes.number.isRequired,
-        deadline: PropTypes.string.isRequired
-    })
-}
-App.defaultProps = {
-    title: "Book List"
-}
-
-export default App

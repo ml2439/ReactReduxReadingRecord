@@ -6,8 +6,8 @@ export default class AddGoal extends Component {
     constructor() {
         super();
         this.state = {
-            numToRead: GOAL.numToRead,
-            deadline: GOAL.deadline
+            numToRead: 25,
+            deadline: "2/11/2018"
         }
     }
 
@@ -43,8 +43,3 @@ export default class AddGoal extends Component {
 AddGoal.propTypes = {
     onAdd: PropTypes.func.isRequired
 }
-
-const GOAL = {
-    numToRead: 40,
-    deadline: "2/11/2018"
-};
