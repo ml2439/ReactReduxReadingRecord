@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-// pure components: pure functions; rely on props pass down to them
+// 1. pure components: pure functions; rely on props pass down to them
 const Stats = props => {
     let booksDone = props.books.filter(b => b.done).length;
     const GOALNUM = props.goal.numToRead;
