@@ -3,7 +3,7 @@
 const C = {
     ADD_BOOK: 'ADD_BOOK',
     REMOVE_BOOK: 'REMOVE_BOOK',
-    FINISH_BOOK: 'FINISH_BOOK',
+    TOGGLE_BOOK: 'TOGGLE_BOOK',
     ADD_GOAL: 'ADD_GOAL'
 }
 
