@@ -21,7 +21,8 @@ const initialState = [
 export default function bookReducer(state=initialState, action) {
     switch(action.type) {
         case C.ADD_BOOK:
-        return [
+        const alreadyAdded = state.some(b => b.name === action.name)
+        return alreadyAdded ? state : [
             ...state,
             {
                 id: action.id,

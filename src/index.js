@@ -7,7 +7,8 @@ import App from './containers/App'
 
 const store = createStore(
     reducer,
-    window.devToolsExtension && window.devToolsExtension())
+    window.devToolsExtension && window.devToolsExtension()
+)
 
 render (
     <Provider store={store}>
