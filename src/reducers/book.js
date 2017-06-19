@@ -18,17 +18,15 @@ const initialState = [
     }
 ]
 
-let nextId = 4
-
 export default function Book(state=initialState, action) {
     switch(action.type) {
         case C.ADD_BOOK:
         return [
             ...state,
             {
+                id: action.id,
                 name: action.name,
-                done: false,
-                id: nextId++
+                done: false
             }
         ]
 
