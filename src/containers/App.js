@@ -44,7 +44,7 @@ export default class App extends Component {
         this.state.books[index].doneDate = (new Date()).toLocaleDateString("en-US");
         this.setState(this.state);
     }
-    onRemoveBook = (index) => {
+    onBookRemove = (index) => {
         this.state.books.splice(index, 1);
         this.setState(this.state);
     }
@@ -73,7 +73,7 @@ export default class App extends Component {
                     {this.state.books.map((b, index) => {
                         return <Book 
                             onBookDone={()=>{this.onBookDone(index)}}
-                            onRemove={()=>{this.onRemoveBook(index)}}
+                            onRemove={()=>{this.onBookRemove(index)}}
                             name={b.name}
                             done={b.done}
                             doneDate={b.doneDate}
