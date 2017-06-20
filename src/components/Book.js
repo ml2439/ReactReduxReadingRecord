@@ -13,7 +13,7 @@ const Book = props => {
             <BookStatus 
                 index={props.index} 
                 toggleBook={props.toggleBook}
-                date={props.doneDate}/>
+            />
         </div>
     );
 }
@@ -21,7 +21,6 @@ Book.propTypes = {
     name: PropTypes.string.isRequired,
     index: PropTypes.number.isRequired,
     done: PropTypes.bool.isRequired,
-    doneDate: PropTypes.string,
     toggleBook: PropTypes.func.isRequired,
     removeBook: PropTypes.func.isRequired
 }
