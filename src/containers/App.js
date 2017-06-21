@@ -6,7 +6,6 @@ import * as ActionCreators from '../actions'
 import Stats from '../components/Stats'
 import BookStatus from '../components/BookStatus'
 import AddBook from '../components/AddBook'
-import AddGoal from '../components/AddGoal'
 import Book from '../components/Book'
 import Header from '../components/Header'
 
@@ -15,7 +14,7 @@ window.React = React;
 // container
 class App extends Component {
     render() {
-        const { dispatch, books, goal, addBook, removeBook, toggleBook, addGoal } = this.props
+        const { dispatch, books, goal, addBook, removeBook, toggleBook } = this.props
 
         const bookComponent = books.map((book, index) => (
             <Book 
@@ -28,7 +27,6 @@ class App extends Component {
         ))
         return (
             <div>
-                <AddGoal addGoal={addGoal} />
                 <Header title="Yearly Reading Goal" books={books} goal={goal}/>
                 <div className="books">
                     { bookComponent }
@@ -57,8 +55,7 @@ const mapDispatchToProps = dispatch => {
     return {
         addBook: (name, id) => dispatch(ActionCreators.addBook(name, id)),
         removeBook: (index) => dispatch(ActionCreators.removeBook(index)),
-        toggleBook: (index) => dispatch(ActionCreators.toggleBook(index)),
-        addGoal: (num, ddl) => dispatch(ActionCreators.addGoal(num, ddl))
+        toggleBook: (index) => dispatch(ActionCreators.toggleBook(index))
     }
 }
 

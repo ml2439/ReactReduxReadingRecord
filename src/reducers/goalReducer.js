@@ -6,7 +6,7 @@ const initialState = {
 }
 export default function goalReducer(state=initialState, action) {
     switch(action.type) {
-        case C.ADD_GOAL:
+        case C.CHANGE_GOAL:
         return {
             numToRead: action.num,
             deadline: action.ddl

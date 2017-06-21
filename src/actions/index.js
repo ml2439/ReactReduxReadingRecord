@@ -18,8 +18,8 @@ export const toggleBook = index => ({
     index
 })
 
-export const addGoal = (num, ddl) => ({
-    type: C.ADD_GOAL,
+export const changeGoal = (num, ddl) => ({
+    type: C.CHANGE_GOAL,
     num,
     ddl
 })

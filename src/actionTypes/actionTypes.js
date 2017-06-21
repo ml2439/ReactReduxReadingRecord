@@ -4,7 +4,7 @@ const C = {
     ADD_BOOK: 'ADD_BOOK',
     REMOVE_BOOK: 'REMOVE_BOOK',
     TOGGLE_BOOK: 'TOGGLE_BOOK',
-    ADD_GOAL: 'ADD_GOAL'
+    CHANGE_GOAL: 'CHANGE_GOAL'
 }
 
 export default C
