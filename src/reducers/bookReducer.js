@@ -7,12 +7,12 @@ const initialState = [
         id: 1
     },
     {
-        name: "Australia",
+        name: "Wonder",
         done: false,
         id: 2
     },
     {
-        name: "South Africa",
+        name: "Lolita",
         done: false,
         id: 3
     }
@@ -52,24 +52,3 @@ export default function bookReducer(state=initialState, action) {
         return state
     }
 }
-
-/****************************
-onBookDone = (index) => {
-    this.state.books[index].done = true;
-    this.state.books[index].doneDate = (new Date()).toLocaleDateString("en-US");
-    this.setState(this.state);
-}
-onBookRemove = (index) => {
-    this.state.books.splice(index, 1);
-    this.setState(this.state);
-}
-onBookAdd = (name) => {
-    this.state.books.push({
-        name,
-        done: false,
-        id: nextId
-    });
-    this.setState(this.state);
-    nextId += 1;
-}
-*****************************/

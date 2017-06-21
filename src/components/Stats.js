@@ -17,9 +17,9 @@ const Stats = props => {
 
     return (
         <div className="stats">
-            Goal: {GOALNUM}, Finished: {booksDone}
+            Deadline: {props.goal.deadline}, Goal: {GOALNUM}, Finished: {booksDone}
             <div>{percentToRead} books left</div>
-            <div>{percentTimeLeft} days left</div>
+            <div>{percentTimeLeft} time left</div>
             <div>Read 1 book per {daysPerBook} days to achieve your goal!</div>
         </div>
     );

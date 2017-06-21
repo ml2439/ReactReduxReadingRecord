@@ -23,7 +23,7 @@ render(
         <HashRouter>
             <Switch>
                 <Route exact path="/" component={App} />
-                <Route exact path="/changegoal" component={ChangeGoal} />
+                <Route path="/changegoal" component={ChangeGoal} />
             </Switch>
         </HashRouter>
     </Provider>,
