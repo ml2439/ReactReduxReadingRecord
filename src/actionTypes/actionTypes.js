@@ -4,7 +4,8 @@ const C = {
     ADD_BOOK: 'ADD_BOOK',
     REMOVE_BOOK: 'REMOVE_BOOK',
     TOGGLE_BOOK: 'TOGGLE_BOOK',
-    CHANGE_GOAL: 'CHANGE_GOAL'
+    SET_NUMBER: 'SET_NUMBER',
+    SET_DEADLINE: 'SET_DEADLINE'
 }
 
 export default C

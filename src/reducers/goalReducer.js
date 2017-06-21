@@ -1,27 +1,25 @@
 import C from '../actionTypes/actionTypes'
 
 const initialState = {
-    numToRead: 25,
+    number: 25,
     deadline: "2/11/2018"
 }
+
 export default function goalReducer(state=initialState, action) {
     switch(action.type) {
-        case C.CHANGE_GOAL:
+        case C.SET_NUMBER:
         return {
-            numToRead: action.num,
-            deadline: action.ddl
+            ...state,
+            number: action.number
+        }
+
+        case C.SET_DEADLINE:
+        return {
+            ...state,
+            deadline: action.deadline
         }
 
         default:
         return state
     }
 }
-
-
-// onGoalAdd = (num, ddl) => {
-//     this.state.goal = {
-//         numToRead: num,
-//         deadline: ddl
-//     };
-//     this.setState(this.state);
-// }

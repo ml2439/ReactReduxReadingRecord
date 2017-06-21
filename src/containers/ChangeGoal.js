@@ -6,22 +6,15 @@ import { Link } from 'react-router-dom'
 
 // 1. logical component -- manage own state; no dependency on others
 class ChangeGoal extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            deadline: "2/11/2018"
-        }
-    }
-    
+
     onNumChange = (e) => {
         const isANumber = !isNaN(parseInt(e.target.value));
         const numberToRead = isANumber ? parseInt(e.target.value) : '';
-        this.props.changeGoal(numberToRead, this.state.deadline);
+        this.props.setNumber(numberToRead);
     }
 
     onDdlChange = (e) => {
-        this.state.deadline = e.target.value;
-        this.setState(this.state);
+        this.props.setDeadline(e.target.value);
     }
 
     goBack = (e) => {
@@ -31,14 +24,16 @@ class ChangeGoal extends Component {
 
     render() {
 
-        const numberToRead = this.props.goal.numToRead;
+        const number = this.props.goal.number;
+        const deadline = this.props.goal.deadline;
+
         return (
             <div className="add-goal-form">
                 <form onSubmit={this.goBack}>
                     <span>Read</span>
-                    <input type="text" value={numberToRead} onChange={this.onNumChange} />
+                    <input type="text" value={number} onChange={this.onNumChange} />
                     <span> books by </span>
-                    <input type="text" value={this.state.deadline} onChange={this.onDdlChange} />
+                    <input type="text" value={deadline} onChange={this.onDdlChange} />
                     <input type="submit" value="Set Goal" />
                 </form>
             </div>
@@ -54,7 +49,8 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
     return {
-        changeGoal: (num, ddl) => dispatch(ActionCreators.changeGoal(num, ddl))
+        setNumber: number => dispatch(ActionCreators.setNumber(number)),
+        setDeadline: deadline => dispatch(ActionCreators.setDeadline(deadline))
     }
 }
 

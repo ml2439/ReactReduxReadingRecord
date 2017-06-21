@@ -18,8 +18,13 @@ export const toggleBook = index => ({
     index
 })
 
-export const changeGoal = (num, ddl) => ({
-    type: C.CHANGE_GOAL,
-    num,
-    ddl
+export const setNumber = number => ({
+    type: C.SET_NUMBER,
+    number
 })
+
+export const setDeadline = deadline => ({
+    type: C.SET_DEADLINE,
+    deadline
+})
+

@@ -40,7 +40,7 @@ class App extends Component {
 App.propTypes = {
     books: PropTypes.array.isRequired,
     goal: PropTypes.shape({
-        numToRead: PropTypes.number.isRequired,
+        number: PropTypes.number.isRequired,
         deadline: PropTypes.string.isRequired
     })
 }

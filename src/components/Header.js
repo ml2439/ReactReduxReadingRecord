@@ -15,7 +15,7 @@ Header.propTypes = {
     title: PropTypes.string.isRequired,
     books: PropTypes.array.isRequired,
     goal: PropTypes.shape({
-        numToRead: PropTypes.number.isRequired,
+        number: PropTypes.number.isRequired,
         deadline: PropTypes.string.isRequired
     })
 }
