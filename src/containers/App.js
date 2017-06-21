@@ -8,11 +8,18 @@ import BookStatus from '../components/BookStatus'
 import AddBook from '../components/AddBook'
 import Book from '../components/Book'
 import Header from '../components/Header'
+import { Link } from 'react-router-dom'
 
 window.React = React;
 
 // container
 class App extends Component {
+
+    goBack = (e) => {
+        e.preventDefault();
+        this.props.history.push("/changegoal");
+    }
+
     render() {
         const { dispatch, books, goal, addBook, removeBook, toggleBook } = this.props
 
@@ -26,9 +33,11 @@ class App extends Component {
                 removeBook={removeBook} 
                 doneButton={book.doneButton}/>
         ))
+
         return (
             <div>
                 <Header title="Yearly Reading Goal" books={books} goal={goal}/>
+                <button onClick={this.goBack}>Change Goal</button>
                 <div className="books">
                     { bookComponent }
                 </div>

@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import {connect} from 'react-redux'
+import { connect } from 'react-redux'
 import * as ActionCreators from '../actions'
 import { Link } from 'react-router-dom'
 
@@ -17,7 +17,7 @@ class ChangeGoal extends Component {
         this.props.setDeadline(e.target.value);
     }
 
-    goBack = (e) => {
+    goForward = (e) => {
         e.preventDefault();
         this.props.history.push("/");
     }
@@ -29,7 +29,7 @@ class ChangeGoal extends Component {
 
         return (
             <div className="add-goal-form">
-                <form onSubmit={this.goBack}>
+                <form onSubmit={this.goForward}>
                     <span>Read</span>
                     <input type="text" value={number} onChange={this.onNumChange} />
                     <span> books by </span>
