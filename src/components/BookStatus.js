@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import '../stylesheets/book-status.scss'
 
 // 1. pure components: pure functions; rely on props pass down to them
 const BookStatus = props => {

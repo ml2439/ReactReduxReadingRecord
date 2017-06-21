@@ -1,0 +1,19 @@
+.add-book {
+    font-size: 1.2em;
+
+    form {
+        display: flex;
+        margin: 1em 0;
+
+        .input-text {
+            flex-grow: 1;
+            font-size: 1em;
+            border: none;
+            border-bottom: 2px #999 solid;
+        }
+
+        .input-submit {
+            border-radius: 4px;
+        }
+    }
+}

@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+import '../stylesheets/addbook.scss'
 
 // 1. logical component -- manage own state; no dependency on others
 export default class AddBook extends Component {
@@ -24,10 +25,10 @@ export default class AddBook extends Component {
 
     render() {
         return (
-            <div className="add-book-form">
+            <div className="add-book">
                 <form onSubmit={this.addBook}>
-                    <input type="text" value={this.state.name} onChange={this.onNameChange} />
-                    <input type="submit" value="Add Book" />
+                    <input className="input-text" type="text" value={this.state.name} onChange={this.onNameChange} />
+                    <input className="input-submit" type="submit" value="Add Book" />
                 </form>
             </div>
         );

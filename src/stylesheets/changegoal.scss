@@ -1,0 +1,33 @@
+.change-goal {
+    max-width: 500px;
+    margin: 0 auto;
+    font-size: 1.5em;
+    
+    div {
+        text-align: center;
+        padding: 25px 0 20px;
+
+        #input-number {
+            width: 2em;
+            font-size: 1em;
+            border: none;
+            border-bottom: 2px #999 solid;
+        }
+
+        #input-date {
+            width: 5em;
+            font-size: 1em;
+            border: none;
+            border-bottom: 2px #999 solid;
+        }
+
+    }
+
+    #button-submit {
+        font-size: 1em;
+        display: block;
+        margin: 0 auto;
+        font-family: fantasy;
+        border-radius: 4px;
+    }
+}

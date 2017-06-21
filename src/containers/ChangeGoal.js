@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import * as ActionCreators from '../actions'
 import { Link } from 'react-router-dom'
+import '../stylesheets/changegoal.scss'
 
 // 1. logical component -- manage own state; no dependency on others
 class ChangeGoal extends Component {
@@ -28,13 +29,15 @@ class ChangeGoal extends Component {
         const deadline = this.props.goal.deadline;
 
         return (
-            <div className="add-goal-form">
+            <div className="change-goal">
                 <form onSubmit={this.goForward}>
-                    <span>Read</span>
-                    <input type="text" value={number} onChange={this.onNumChange} />
-                    <span> books by </span>
-                    <input type="text" value={deadline} onChange={this.onDdlChange} />
-                    <input type="submit" value="Set Goal" />
+                    <div>
+                        <span>Read </span>
+                        <input id="input-number" type="text" value={number} onChange={this.onNumChange} />
+                        <span> books by </span>
+                        <input id="input-date" type="text" value={deadline} onChange={this.onDdlChange} />
+                    </div>
+                    <input id="button-submit" type="submit" value="Set Goal" />
                 </form>
             </div>
         );       

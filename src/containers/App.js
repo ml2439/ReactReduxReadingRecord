@@ -9,6 +9,7 @@ import AddBook from '../components/AddBook'
 import Book from '../components/Book'
 import Header from '../components/Header'
 import { Link } from 'react-router-dom'
+import '../stylesheets/app.scss'
 
 window.React = React;
 
@@ -35,9 +36,9 @@ class App extends Component {
         ))
 
         return (
-            <div>
+            <div id="app">
                 <Header title="Yearly Reading Goal" books={books} goal={goal}/>
-                <button onClick={this.goBack}>Change Goal</button>
+                <button id="button-submit" onClick={this.goBack}>Change Goal</button>
                 <div className="books">
                     { bookComponent }
                 </div>

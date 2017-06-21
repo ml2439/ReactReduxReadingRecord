@@ -1,12 +1,13 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Stats from './Stats'
+import '../stylesheets/header.scss'
 
 // 2. pure components: pure functions
 const Header = props => {
     return (
         <div className="header">
-            {props.title}
+            <div id="title">{props.title}</div>
             <Stats books={props.books} goal={props.goal}/>
         </div>
     );

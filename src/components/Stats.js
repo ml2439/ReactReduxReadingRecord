@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import '../stylesheets/stats.scss'
 
 // 1. pure components: pure functions; rely on props pass down to them
 const Stats = props => {
@@ -17,7 +18,8 @@ const Stats = props => {
 
     return (
         <div className="stats">
-            Deadline: {props.goal.deadline}, Goal: {GOALNUM}, Finished: {booksDone}
+            <div>Deadline: {props.goal.deadline}</div>
+            <div>Done / Goal: {booksDone} / {GOALNUM}</div>
             <div>{percentToRead} books left</div>
             <div>{percentTimeLeft} time left</div>
             <div>Read 1 book per {daysPerBook} days to achieve your goal!</div>

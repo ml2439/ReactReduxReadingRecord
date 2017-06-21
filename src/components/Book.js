@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import BookStatus from './BookStatus'
+import '../stylesheets/book.scss'
 
 // 2. pure component: depend on other
 const Book = props => {
