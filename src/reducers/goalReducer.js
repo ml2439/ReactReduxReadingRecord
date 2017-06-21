@@ -1,8 +1,12 @@
 import C from '../actionTypes/actionTypes'
 
+let aYearFromNow = new Date()
+aYearFromNow.setFullYear(aYearFromNow.getFullYear() + 1)    // add a year to now
+aYearFromNow = aYearFromNow.toLocaleDateString("en-US")
+
 const initialState = {
     number: 25,
-    deadline: "2/11/2018"
+    deadline: aYearFromNow
 }
 
 export default function goalReducer(state=initialState, action) {
