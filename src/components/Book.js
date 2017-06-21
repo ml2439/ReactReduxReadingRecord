@@ -13,6 +13,7 @@ const Book = props => {
             <BookStatus 
                 index={props.index} 
                 toggleBook={props.toggleBook}
+                doneButton={props.doneButton}
             />
         </div>
     );
@@ -22,7 +23,8 @@ Book.propTypes = {
     index: PropTypes.number.isRequired,
     done: PropTypes.bool.isRequired,
     toggleBook: PropTypes.func.isRequired,
-    removeBook: PropTypes.func.isRequired
+    removeBook: PropTypes.func.isRequired,
+    doneButton: PropTypes.string.isRequired
 }
 
 export default Book

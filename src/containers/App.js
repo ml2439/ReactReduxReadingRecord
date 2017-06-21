@@ -23,7 +23,8 @@ class App extends Component {
                 done={book.done}
                 key={book.name}
                 toggleBook={toggleBook}
-                removeBook={removeBook} />
+                removeBook={removeBook} 
+                doneButton={book.doneButton}/>
         ))
         return (
             <div>
