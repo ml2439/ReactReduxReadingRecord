@@ -14,10 +14,28 @@ const initialState = [
         id: 2
     },
     {
-        name: "Lolita",
+        name: "The Captain Class",
         done: false,
         doneButton: "Done",
         id: 3
+    },
+    {
+        name: "Carpe Diem",
+        done: false,
+        doneButton: "Done",
+        id: 4
+    },
+    {
+        name: "Nothing But a Circus",
+        done: false,
+        doneButton: "Done",
+        id: 5
+    },
+    {
+        name: "October",
+        done: false,
+        doneButton: "Done",
+        id: 6
     }
 ]
 
@@ -47,7 +65,7 @@ export default function bookReducer(state=initialState, action) {
                 return {
                     ...book,
                     done: true,     // !book.done,
-                    doneButton: (new Date()).toLocaleDateString("en-US")
+                    doneButton: "Finished on: " + (new Date()).toLocaleDateString("en-US")
                 }
             }
             return book

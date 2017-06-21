@@ -1,6 +1,6 @@
 import C from '../actionTypes/actionTypes'
 
-let nextId = 4
+let nextId = 7
 
 export const addBook = (name, id) => ({
     type: C.ADD_BOOK,
